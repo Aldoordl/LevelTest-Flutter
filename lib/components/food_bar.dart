@@ -57,7 +57,7 @@ class _FoodBarState extends State<FoodBar> {
                     // Price
                     Text(
                       '\$${widget.food.price}',
-                      style: TextStyle(color: Colors.grey[700]),
+                      style: GoogleFonts.montserrat(color: Colors.grey[700]),
                     ),
                   ],
                 ),

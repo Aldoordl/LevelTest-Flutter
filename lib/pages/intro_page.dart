@@ -20,7 +20,7 @@ class IntroPage extends StatelessWidget {
 
             // shop name
             Text(
-              "SUSHI MAN", 
+              "SUPANOVA", 
               style: GoogleFonts.dmSerifDisplay(
                 fontSize: 32,
                 color: Colors.white,
@@ -51,7 +51,7 @@ class IntroPage extends StatelessWidget {
             // subtitle
             Text(
               "Feel the taste of the most popular Japanese food from anywhere and anytime", 
-              style: TextStyle(
+              style: GoogleFonts.montserrat(
                 color: Colors.grey[300],
                 fontSize: 15,
                 height: 2,

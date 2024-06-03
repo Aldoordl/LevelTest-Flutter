@@ -69,8 +69,8 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
         barrierDismissible: false,
         builder: (context) =>AlertDialog(
           backgroundColor: Colors.white,
-          content: const Text("Succesfully added to cart",
-          style: TextStyle(color: Colors.black, fontSize: 16),
+          content: Text("Succesfully added to cart",
+          style: GoogleFonts.montserrat(color: Colors.black, fontSize: 16),
           textAlign: TextAlign.center,
           ),
           actions: [
@@ -97,6 +97,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
     return Scaffold(
       extendBodyBehindAppBar: true, 
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: Colors.transparent,
         elevation: 0,
         iconTheme: IconThemeData(color: Colors.grey[900]), // Warna ikon pada AppBar
@@ -135,7 +136,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                       //rating number
                       Text(
                         widget.food.rating,
-                        style: TextStyle(
+                        style: GoogleFonts.montserrat(
                           color: Colors.grey[600],
                           fontWeight: FontWeight.bold,
                           fontSize: 15
@@ -157,7 +158,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   //description
                   Text(
                     "Description",
-                    style: TextStyle(
+                    style: GoogleFonts.montserrat(
                       color: Colors.grey[900],
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
@@ -168,7 +169,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
 
                   Text(
                     widget.food.description,
-                    style: TextStyle(
+                    style: GoogleFonts.montserrat(
                       color: Colors.grey[600],
                       fontSize: 15,
                       height: 2,
@@ -194,7 +195,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                     //price
                     Text(
                       "\$${widget.food.price}",
-                      style: const TextStyle(
+                      style: GoogleFonts.montserrat(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -223,7 +224,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                           child: Center(
                             child: Text(
                               quantityCount.toString(),
-                              style: const TextStyle(
+                              style: GoogleFonts.montserrat(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,

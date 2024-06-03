@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ul_kelas11/models/food.dart';
 import 'package:ul_kelas11/models/shop.dart';
 import 'package:ul_kelas11/theme/colors.dart';
@@ -22,7 +23,7 @@ class CheckoutPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: primaryColor,
       appBar: AppBar(
-        title: const Text("Checkout", style: TextStyle(color: Colors.white)),
+        title: Text("Checkout", style: GoogleFonts.montserrat(color: Colors.white)),
         elevation: 0,
         backgroundColor: primaryColor,
         foregroundColor: Colors.white,
@@ -46,12 +47,12 @@ class CheckoutPage extends StatelessWidget {
                   child: ListTile(
                     title: Text(
                       foodName,
-                      style: const TextStyle(
+                      style: GoogleFonts.montserrat(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
                       foodPrice,
-                      style: TextStyle(
+                      style: GoogleFonts.montserrat(
                         color: Colors.grey[200],
                       ),
                     ),
@@ -64,7 +65,7 @@ class CheckoutPage extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               'Total: \$${totalPrice.toStringAsFixed(2)}',
-              style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              style: GoogleFonts.montserrat(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
           Padding(

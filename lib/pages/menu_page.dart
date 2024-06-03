@@ -97,32 +97,40 @@ class _MenuPageState extends State<MenuPage> with SingleTickerProviderStateMixin
           child: Row(
             children: [
               Expanded(
-                child: SizedBox(
-                  height: 40,
+                child: Container(
+                  height: 45,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    gradient: LinearGradient(
+                      colors: [Colors.white, Colors.grey.shade200],
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade300,
+                        blurRadius: 5,
+                        spreadRadius: 2,
+                      ),
+                    ],
+                  ),
                   child: TextField(
                     decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.grey[50],
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
+                      prefixIcon: Icon(Icons.search, color: Colors.grey),
+                      border: InputBorder.none,
                       hintText: "Search here...",
+                      hintStyle: TextStyle(color: Colors.grey[600]),
                     ),
                   ),
                 ),
               ),
-              const SizedBox(width: 5),
-              IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/cartpage');
-                },
-                icon: const CircleAvatar(
-                  backgroundImage: AssetImage('lib/images/profile.png'),
+              const SizedBox(width: 10),
+              CircleAvatar(
+                radius: 22,
+                backgroundColor: Colors.grey.shade200,
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/cartpage');
+                  },
+                  icon: Icon(Icons.shopping_cart, color: Colors.grey.shade800),
                 ),
               ),
             ],
@@ -160,7 +168,7 @@ class _MenuPageState extends State<MenuPage> with SingleTickerProviderStateMixin
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Text(
                   "Food Menu",
-                  style: TextStyle(
+                  style: GoogleFonts.montserrat(
                     fontWeight: FontWeight.bold,
                     color: Colors.grey[800],
                     fontSize: 18,
@@ -253,8 +261,8 @@ class _MenuPageState extends State<MenuPage> with SingleTickerProviderStateMixin
                                       // Promo message
                                       Text(
                                         'Get 32% Promo',
-                                        style: GoogleFonts.dmSerifDisplay(
-                                          fontSize: 20,
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 18,
                                           color: Colors.white,
                                         ),
                                       ),
@@ -284,7 +292,7 @@ class _MenuPageState extends State<MenuPage> with SingleTickerProviderStateMixin
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Text(
                   "Popular Food",
-                  style: TextStyle(
+                  style: GoogleFonts.montserrat(
                     fontWeight: FontWeight.bold,
                     color: Colors.grey[800],
                     fontSize: 18,
@@ -342,13 +350,31 @@ class _MenuPageState extends State<MenuPage> with SingleTickerProviderStateMixin
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   backgroundColor: Colors.white,
+      //   selectedItemColor: Colors.blue,
+      //   unselectedItemColor: Colors.grey,
+      //   showSelectedLabels: true,
+      //   showUnselectedLabels: false,
+      //   type: BottomNavigationBarType.fixed,
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.home_outlined),
+      //       activeIcon: Icon(Icons.home),
+      //       label: 'Home',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.search_outlined),
+      //       activeIcon: Icon(Icons.search),
+      //       label: 'Search',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.person_outline),
+      //       activeIcon: Icon(Icons.person),
+      //       label: 'Profile',
+      //     ),
+      //   ],
+      // ),
     );
   }
 }

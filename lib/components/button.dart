@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ul_kelas11/theme/colors.dart';
 
 class MyButton extends StatelessWidget {
@@ -27,7 +28,7 @@ class MyButton extends StatelessWidget {
             // text
             Text(
               text, 
-              style: const TextStyle(color: Colors.white),
+              style: GoogleFonts.montserrat(color: Colors.white),
             ),
             
             const SizedBox(width: 10),

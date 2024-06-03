@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ul_kelas11/components/button.dart';
 import 'package:ul_kelas11/models/food.dart';
 import 'package:ul_kelas11/models/shop.dart';
@@ -24,9 +25,9 @@ class CartPage extends StatelessWidget {
       builder: (context, value, child) => Scaffold(
         backgroundColor: primaryColor,
         appBar: AppBar(
-          title: const Text(
+          title: Text(
             "My cart",
-            style: TextStyle(color: Colors.white),
+            style: GoogleFonts.montserrat(color: Colors.white),
           ),
           elevation: 0,
           backgroundColor: primaryColor,
@@ -58,12 +59,12 @@ class CartPage extends StatelessWidget {
                     child: ListTile(
                       title: Text(
                         foodName,
-                        style: const TextStyle(
+                        style: GoogleFonts.montserrat(
                             color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                       subtitle: Text(
                         foodPrice,
-                        style: TextStyle(
+                        style: GoogleFonts.montserrat(
                           color: Colors.grey[200],
                         ),
                       ),

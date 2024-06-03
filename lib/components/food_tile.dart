@@ -47,8 +47,8 @@ class FoodTile extends StatelessWidget {
                   //price
                   Text(
                     '\$${food.price}',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                    style: GoogleFonts.montserrat(
+                      // fontWeight: FontWeight.bold,
                       color: Colors.grey[700],
                     ),
                   ),
@@ -62,7 +62,7 @@ class FoodTile extends StatelessWidget {
                       ),
                       Text(
                         food.rating,
-                        style: const TextStyle(color: Colors.grey),
+                        style: GoogleFonts.montserrat(color: Colors.grey),
                       ),
                     ],
                   )
